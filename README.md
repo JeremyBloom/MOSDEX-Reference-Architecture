@@ -1,5 +1,6 @@
 # MOSDEX-Reference-Architecture
 The Reference Architecture is a recommendation for how MOSDEX data flows from its source in enterprise systems to an optimization solver and back again.
+<p>
 <b>Introduction</b><br>
 This project comprises a Java 
 implementation of the MOSDEX Reference Architecture (RefArc). MOSDEX, or 
