@@ -19,8 +19,7 @@ invoke the solver, and retrieve the solution data into MOSDEX (packages modeling
 <li>demonstrating MOSDEX on actual problem instances (package examples).</li>
 </ol>
 <p>
-The syntax of this version of MOSDEX (2.0) is defined at MOSDEX/MOSDEX
-v2-0/MOSDEXSchemaV2-0.json, located in this package.
+The syntax of this version of MOSDEX (2.0) is defined at MOSDEXSchemaV2-0.json, located in this package.
 <p>
 <b>Dependencies</b><br>
 In order to use the code in this project, you will need to link to several other code packages:
