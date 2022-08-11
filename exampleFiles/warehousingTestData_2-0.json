@@ -1,0 +1,101 @@
+{
+  "SYNTAX": "MOSDEX/MOSDEX v2-0/MOSDEXSchemaV2-0.json",
+  "MODULES": [
+    {
+      "NAME": "warehouseData",
+      "CLASS": "MODULE",
+      "KIND": "INPUT",
+      "HEADING": {
+        "DESCRIPTION": [
+          "Data for warehouse location problem",
+          "A small data set for testing",
+          "Includes sales demand data"
+        ]
+      },
+      "TABLES": [
+        {
+          "NAME": "warehouses",
+          "CLASS": "DATA",
+          "KIND": "INPUT",
+          "SCHEMA": {
+            "FIELDS": [ "location", "fixedCost", "capacityCost" ],
+            "TYPES": [ "STRING", "DOUBLE", "DOUBLE" ]
+          },
+          "INSTANCE": [
+            [ "Brockton-MA", 550000.0, 148.0 ],
+            [ "Bristol-CT", 600000.0, 148.0 ]
+          ]
+        },
+        {
+          "NAME": "routes",
+          "CLASS": "DATA",
+          "KIND": "INPUT",
+          "SCHEMA": {
+            "FIELDS": [ "location", "store", "shippingCost" ],
+            "TYPES": [ "STRING", "STRING", "DOUBLE" ]
+          },
+          "INSTANCE": [
+            [ "Brockton-MA", "Malden-MA", 42.94 ],
+            [ "Brockton-MA", "Medford-MA", 41.43 ],
+            [ "Brockton-MA", "Quincy-MA", 18.61 ],
+            [ "Brockton-MA", "Brockton-MA", 0.0 ],
+            [ "Brockton-MA", "Bristol-CT", 186.05 ],
+            [ "Brockton-MA", "Manchester-CT", 144.12 ],
+            [ "Brockton-MA", "Milford-CT", 217.46 ],
+            [ "Brockton-MA", "New-Haven-CT", 201.55 ],
+            [ "Brockton-MA", "Stamford-CT", 267.37 ],
+            [ "Bristol-CT", "Malden-MA", 197.68 ],
+            [ "Bristol-CT", "Medford-MA", 191.09 ],
+            [ "Bristol-CT", "Quincy-MA", 191.12 ],
+            [ "Bristol-CT", "Brockton-MA", 186.05 ],
+            [ "Bristol-CT", "Bristol-CT", 0.0 ],
+            [ "Bristol-CT", "Manchester-CT", 41.96 ],
+            [ "Bristol-CT", "Milford-CT", 56.67 ],
+            [ "Bristol-CT", "New-Haven-CT", 44.54 ],
+            [ "Bristol-CT", "Stamford-CT", 94.66 ]
+          ]
+        },
+        {
+          "NAME": "stores",
+          "CLASS": "DATA",
+          "KIND": "INPUT",
+          "SCHEMA": {
+            "FIELDS": [ "store" ],
+            "TYPES": [ "STRING" ]
+          },
+          "INSTANCE": [
+            [ "Malden-MA" ],
+            [ "Medford-MA" ],
+            [ "Quincy-MA" ],
+            [ "Brockton-MA" ],
+            [ "Bristol-CT" ],
+            [ "Manchester-CT" ],
+            [ "Milford-CT" ],
+            [ "New-Haven-CT" ],
+            [ "Stamford-CT" ]
+          ]
+        },
+        {
+          "NAME": "demands",
+          "CLASS": "DATA",
+          "KIND": "INPUT",
+          "SCHEMA": {
+            "FIELDS": [ "store", "amount" ],
+            "TYPES": [ "STRING", "DOUBLE" ]
+          },
+          "INSTANCE": [
+            [ "Malden-MA", 104.0 ],
+            [ "Medford-MA", 50.0 ],
+            [ "Quincy-MA", 25.0 ],
+            [ "Brockton-MA", 28.0 ],
+            [ "Bristol-CT", 28.0 ],
+            [ "Manchester-CT", 80.0 ],
+            [ "Milford-CT", 103.0 ],
+            [ "New-Haven-CT", 80.0 ],
+            [ "Stamford-CT", 73.0 ]
+          ]
+        }
+      ]
+    }
+  ]
+}
