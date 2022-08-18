@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>JAB</groupId>
+  <artifactId>MOSDEX</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>MOSDEX</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<!-- Added J. Bloom February 9, 2022 -->
+    <maven.compiler.source>1.11</maven.compiler.source>
+    <maven.compiler.target>1.11</maven.compiler.target>
+	<!-- /Added J. Bloom February 9, 2022 -->
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13</version>
+      <scope>test</scope>
+    </dependency>    
+	<dependency>
+    	<groupId>com.github.java-json-tools</groupId>
+    	<artifactId>json-schema-core</artifactId>
+    	<version>1.2.10</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.github.java-json-tools</groupId>
+    	<artifactId>json-schema-validator</artifactId>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.hadoop</groupId>
+    	<artifactId>hadoop-client</artifactId>
+    	<version>2.8.5</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.spark</groupId>
+    	<artifactId>spark-core_2.12</artifactId>
+    	<version>3.2.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.spark</groupId>
+    	<artifactId>spark-sql_2.12</artifactId>
+    	<version>3.2.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.scala-lang</groupId>
+    	<artifactId>scala-library</artifactId>
+    	<version>2.12.15</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.skyscreamer</groupId>
+    	<artifactId>jsonassert</artifactId>
+    	<version>1.5.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>cplex</groupId>
+    	<artifactId>cplex</artifactId>
+    	<version>129</version>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>com.github.java-json-tools</groupId>
+  			<artifactId>json-schema-validator</artifactId>
+  			<version>2.2.10</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  <build>
+  <plugins>
+	<!-- Added J. Bloom April 5, 2020 -->
+  	<plugin>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-compiler-plugin</artifactId>
+  		<version>3.3</version>
+	    <configuration>
+	        <source>1.11</source>
+	        <target>1.11</target>
+	    </configuration>
+  	</plugin>
+	<!-- /Added J. Bloom April 5, 2020 -->
+  </plugins>
+  </build>
+  <modules>
+  	<module>mosdex-cplx</module>
+  	<module>mosdex-opal</module>
+  </modules>
+</project>
